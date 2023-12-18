@@ -1,0 +1,109 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content_wrapper {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: red;
+}
+
+.image_wrapper {
+  width: 100%;
+  aspect-ratio: 3/2;
+  background-color: green;
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .content_wrapper::after {
+    content: '1/1';
+  }
+  .image_wrapper::after {
+    content: '3/2';
+  }
+}
+
+/* On screens that are 1023px wide or less, go from four columns to two columns */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .content_wrapper {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-color: red;
+  }
+
+  .content_wrapper::after {
+    content: '3:2';
+  }
+
+  .image_wrapper {
+    width: 0%;
+    display: none;
+    aspect-ratio: 3/2;
+    background-color: green;
+  }
+}
+
+/* On screens that are 1365px wide or less, go from four columns to two columns */
+@media screen and (max-width: 1365px) {
+  .content_wrapper {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-color: red;
+  }
+
+  .content_wrapper::after {
+    content: '3:2';
+  }
+
+  .image_wrapper {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: green;
+  }
+
+  .image_wrapper::after {
+    content: '1/1';
+  }
+}
+
+/* On screens that are 1365px wide or less, go from four columns to two columns */
+@media screen and (min-width: 1365px) {
+  .content_wrapper {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-color: red;
+  }
+
+  .content_wrapper::after {
+    content: '3:2';
+  }
+
+  .image_wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: blue;
+  }
+
+  .image_wrapper::after {
+    content: '16:9';
+  }
+}
+
+/* **************************************** */
+
+li {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+li:hover {
+  font-weight: 500;
+  background-color: whitesmoke;
+}
