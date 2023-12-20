@@ -9,6 +9,7 @@ import {
 import MyRoutes from './MyRoutes.tsx';
 import Page2 from './page2/Page2.tsx';
 import Page3 from './page3/Page3.tsx';
+import Page4 from './page4/Page4.tsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: 'page3',
         element: <Page3 />
+      },
+      {
+        path: 'page4',
+        element: <Page4 />
       }
     ]
   },
