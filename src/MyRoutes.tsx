@@ -12,6 +12,7 @@ const MyRoutes = () => {
         <li onClick={() => { navigate('page2') }}>With same aspect ratio (16:9/16:9) from desktop view</li>
         <li onClick={() => { navigate('page3') }}>With width and safe height</li>
         <li onClick={() => { navigate('page4') }}>With different aspect ratio and combined ratio for parent</li>
+        <li onClick={() => { navigate('page5') }}>With only parent aspect ratio</li>
       </ol>
       {
         outlet ? outlet : <Page1 />

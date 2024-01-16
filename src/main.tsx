@@ -10,6 +10,7 @@ import MyRoutes from './MyRoutes.tsx';
 import Page2 from './page2/Page2.tsx';
 import Page3 from './page3/Page3.tsx';
 import Page4 from './page4/Page4.tsx';
+import Page5 from './page5/Page5.tsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: 'page4',
         element: <Page4 />
+      },
+      {
+        path: 'page5',
+        element: <Page5 />
       }
     ]
   },
